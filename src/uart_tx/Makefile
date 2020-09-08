@@ -1,7 +1,7 @@
 TARGET=uart_tx
 TOP=uart_tx
 
-OBJS+=uart_tx.v rst_gen.v
+OBJS+=top.v
 
 TRELLIS=/usr/local/share/trellis
 
@@ -11,7 +11,7 @@ $(TARGET).json: $(OBJS)
 	yosys -p "synth_ecp5 -json $@" $(OBJS)
 
 $(TARGET)_out.config: $(TARGET).json
-	nextpnr-ecp5 --25k --package CABGA256 --speed 6 --json $< --textcfg $@ --lpf $(TARGET).lpf --freq 65
+	nextpnr-ecp5 --25k --package CABGA256 --speed 6 --json $< --textcfg $@ --lpf top.lpf --freq 65
 
 $(TARGET).bit: $(TARGET)_out.config
 	ecppack --svf ${TARGET}.svf $< $@
