@@ -1,6 +1,6 @@
 `include "uart_tx.v"
 
-/* baudrate: 500K */
+/* baudrate: 9600 */
 /* Top level module for keypad + UART demo */
 module top (
     // input hardware clock (25 MHz)
@@ -9,16 +9,20 @@ module top (
     TX, 
     );
 
+    parameter clk_freq = 25000000;
+    parameter baudrate = 9600;
+
     /* Clock input */
     input clk_i;
 
     /* FTDI I/O */
     output TX;
 
-    /* 500K Hz clock generation (from 25 MHz) */
-    reg clk_500k = 0;
-    reg [31:0] cntr_500k = 32'b0;
-    parameter period_500k = 25;
+    /* 9600 Hz clock generation (from 25 MHz) */
+    reg clk_9600 = 0;
+    reg [31:0] cntr_9600 = 32'b0;
+    //parameter period_9600 = /* 2500 */; /* clk_freq / 2 / baudrate */
+    parameter period_9600 = (clk_freq / 2 / baudrate);
 
     /* 1 Hz clock generation (from 25 MHz) */
     reg clk_1 = 0;
@@ -43,7 +47,7 @@ module top (
     */
     uart_tx_8n1 transmitter (
         // 9600 baud rate clock
-        .clk (clk_500k),
+        .clk (clk_9600),
         // byte to be transmitted
         .txbyte (uart_txbyte),
         // trigger a UART transmit on baud clock
@@ -60,10 +64,10 @@ module top (
     /* Low speed clock generation */
     always @ (posedge clk_i) begin
         /* generate 500K Hz clock */
-        cntr_500k <= cntr_500k + 1;
-        if (cntr_500k == period_500k) begin
-            clk_500k <= ~clk_500k;
-            cntr_500k <= 32'b0;
+        cntr_9600 <= cntr_9600 + 1;
+        if (cntr_9600 == period_9600) begin
+            clk_9600 <= ~clk_9600;
+            cntr_9600 <= 32'b0;
         end
 
         /* generate 1 Hz clock */
