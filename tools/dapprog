@@ -19,12 +19,15 @@ echo EXT: $EXT
 if [ "${EXT}" == "svf" ]; then
     TARGET="$IMAGE_FILE"
 elif [ "${EXT}" == "bit" ]; then
-    echo "illegal suffix [$EXT]"
-    exit 1
+    NAME="${IMAGE_FILE%%.bit}"
+    /home/pi/oss/ulx3s/tools/ujprog/ujprog -j FLASH ${IMAGE_FILE} > ${NAME}_flash.svf
+    TARGET="${NAME}_flash.svf"
 else
     echo "illegal suffix [$EXT]"
     exit 1
 fi
+
+echo "TARGET: ${TARGET}"
 
 CONFIG=${CURRENT_DIR}/cmsisdap.cfg
 
