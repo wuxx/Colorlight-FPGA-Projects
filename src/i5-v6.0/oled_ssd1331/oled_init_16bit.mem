@@ -1,0 +1,81 @@
+// This file must be in the directory from where
+// the verilog compiler is running.
+// The path to this file is not relative to the
+// verilog source that needs to include this file.
+// Use symlink (ln -s orig copy) or copy (cp orig copy).
+// 44 bytes follow:
+// 0: NOP
+BC
+// 1: Set display off
+AE
+// 2: Set data format
+// A0 20 normal 8bpp
+// A0 22 X-flip 8bpp
+// A0 30 Y-flip 8bpp
+// A0 32 XY-flip 8bpp
+// A0 60 normal 16bpp
+// A0 62 X-flip 16bpp
+// A0 70 Y-flip 16bpp
+// A0 72 XY-flip 16bpp
+A0
+60
+// 4: Set display start line
+A1
+00
+// 6: Set display offset
+A2
+00
+// 8: Set display mode normal
+A4
+// 9: Set multiplex ratio
+A8
+3F
+// 11: Set master configuration
+AD
+8E
+// 13: Set power save mode
+B0
+00
+// 15: Phase 1/2 period adjustment
+B1
+74
+// 17: Set display clock divider
+F0
+F0
+// 19: Set precharge A
+8A
+64
+// 21: Set precharge B
+8B
+78
+// 23: Set precharge C
+8C
+64
+// 25: Set precharge voltage
+BB
+31
+// 27: Set contrast A
+81
+FF
+// 29: Set contrast B
+82
+FF
+// 31: Set contrast C
+83
+FF
+// 33: Set Vcomh voltage
+BE
+3E
+// 35: Master current control
+87
+06
+// 37: Set column address
+15
+00
+5F
+// 40: Set row address
+75
+00
+3F
+// 43: Set display on
+AF
