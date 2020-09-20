@@ -8,9 +8,9 @@
 LFE5U-25F-6BG381C
 - SDRAM  
 EM638325BK-6H
-- SPI Flash
+- SPI Flash  
 GD25Q16CSIG
-- Ethernet PHY
+- Ethernet PHY  
 1Gb Ethernet PHY Broadcom B50612D x 2
 
 ### JTAG
@@ -243,8 +243,9 @@ A 25Mhz clock is connected to FPGA with pin P3
 
 ## reference
 
-- chubby75
+- chubby75  
 [https://github.com/q3k/chubby75](https://github.com/q3k/chubby75)
-- Colorlight-5A-75B
+- Colorlight-5A-75B  
 [https://github.com/kholia/Colorlight-5A-75B](https://github.com/kholia/Colorlight-5A-75B)
-
+- ulx3s_examples by lawrie  
+[https://github.com/lawrie/ulx3s_examples](https://github.com/lawrie/ulx3s_examples)
