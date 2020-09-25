@@ -33,8 +33,8 @@ A 25Mhz clock is connected to FPGA with pin P3
 | Pin | Function |
 |-----|----------|
 | CS  | R2       |
-| MOSI| V2       |
-| MISO| W2       |
+| MISO| V2       |
+| MOSI| W2       |
 | SCK | U3       |
 
 
