@@ -45,29 +45,36 @@ module oled_video #(
   assign oled_mosi = data[7];
 
   always @(posedge clk) begin
-        if (reset_cnt != 2) begin
+        if (reset_cnt != 2) begin   /* init */
             reset_cnt <= reset_cnt+1;
             data <= C_oled_init[0];
         end else if (init_cnt[9:4] != C_init_size) begin
             init_cnt <= init_cnt + 1;
-            if (init_cnt[3:0] == 0) begin
+
+            if (init_cnt[3:0] == 0) begin 
+
+                /* cmd */
                 if (dc == 0) data <= C_oled_init[init_cnt[9:4]];
-                else begin
+                /* data */
+                else begin  
                     byte <= ~byte;
-		    data <= byte ? color[7:0] : color[15:8];
+		            data <= byte ? color[7:0] : color[15:8];
                     if(byte == 0) begin
-                      next_pixel <= 1;
-                      if (x == C_x_size-1) begin
-                        x <= 0;
-                        y <= y + 1;
-                      end else x <= x + 1;
+                        next_pixel <= 1;
+                        if (x == C_x_size-1) begin
+                            x <= 0;
+                            y <= y + 1;
+                        end 
+                    else 
+                        x <= x + 1;
                     end
                 end
+
             end else begin
               next_pixel <= 0;
               if (init_cnt[0] == 0) data <= { data[6:0], 1'b0 };
             end
-	end else begin 
+	    end else begin 
             dc <= 1;
             init_cnt[9:4] <= C_init_size - 1;
         end

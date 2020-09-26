@@ -1,0 +1,8 @@
+read_verilog ULX3S_25F.v
+read_verilog llhdmi.v
+read_verilog vgatestsrc.v
+read_verilog TMDS_encoder.v
+read_verilog clock.v
+read_verilog OBUFDS.v
+hierarchy -top ULX3S_25F
+synth_ecp5 -json ULX3S_25F.json

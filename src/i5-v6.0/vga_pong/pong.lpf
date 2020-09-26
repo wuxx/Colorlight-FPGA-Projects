@@ -1,0 +1,45 @@
+LOCATE      COMP "clk25" SITE "P3";
+IOBUF       PORT "clk25" IO_TYPE=LVCMOS33;
+FREQUENCY   PORT "clk25" 25 MHZ;
+
+LOCATE      COMP "led_o" SITE "U16";
+IOBUF       PORT "led_o" IO_TYPE=LVCMOS25;
+
+LOCATE      COMP "vga_h_sync" SITE "C17";
+LOCATE      COMP "vga_v_sync" SITE "B18";
+LOCATE      COMP "vga_R"      SITE "E2";
+LOCATE      COMP "vga_R1"     SITE "D2";
+LOCATE      COMP "vga_R2"     SITE "B1";
+LOCATE      COMP "vga_R3"     SITE "A3";
+LOCATE      COMP "vga_G"      SITE "A18";
+LOCATE      COMP "vga_G1"     SITE "A19";
+LOCATE      COMP "vga_G2"     SITE "B19";
+LOCATE      COMP "vga_G3"     SITE "D20";
+
+LOCATE      COMP "vga_B"      SITE "D1";
+LOCATE      COMP "vga_B1"     SITE "C1";
+LOCATE      COMP "vga_B2"     SITE "C2";
+LOCATE      COMP "vga_B3"     SITE "E3";
+
+LOCATE      COMP "quadA"     SITE "C3";
+LOCATE      COMP "quadB"     SITE "B4";
+
+IOBUF       PORT "vga_h_sync" IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_v_sync" IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_R"      IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_R1"     IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_R2"     IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_R3"     IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_G"      IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_G1"     IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_G2"     IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_G3"     IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_B"      IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_B1"     IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_B2"     IO_TYPE=LVCMOS33;
+IOBUF       PORT "vga_B3"     IO_TYPE=LVCMOS33;
+
+IOBUF       PORT "quadA"     IO_TYPE=LVCMOS33;
+IOBUF       PORT "quadB"     IO_TYPE=LVCMOS33;
+
+

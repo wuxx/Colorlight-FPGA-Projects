@@ -10,6 +10,7 @@ module top_checkered (
     wire [15:0] color = x[3] ^ y[3] ? {5'd0, x[6:1], 5'd0} : {y[5:1], 6'd0, 5'd0};
     wire [6:0] x, y;
     
+    /* 0.95inch oled SSD1331, resolution 96 x 64 */
     oled_video #(
         .C_init_file("oled_init_16bit.mem"),
         .C_init_size(44)
