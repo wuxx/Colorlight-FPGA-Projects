@@ -20,6 +20,7 @@ if [ "${EXT}" == "svf" ]; then
     TARGET="$IMAGE_FILE"
 elif [ "${EXT}" == "bit" ]; then
     NAME="${IMAGE_FILE%%.bit}"
+    #/home/pi/oss/ulx3s/tools/ujprog/ujprog -j SRAM  ${IMAGE_FILE} > ${NAME}_sram.svf
     /home/pi/oss/ulx3s/tools/ujprog/ujprog -j FLASH ${IMAGE_FILE} > ${NAME}_flash.svf
     TARGET="${NAME}_flash.svf"
 else

@@ -1,0 +1,45 @@
+diff --git a/ujprog/ujprog.c b/ujprog/ujprog.c
+index a233bb7..0085bc6 100644
+--- a/ujprog/ujprog.c
++++ b/ujprog/ujprog.c
+@@ -41,7 +41,7 @@
+  * - execute SVF commands provided as command line args?
+  */
+ 
+-static const char *verstr = "ULX2S / ULX3S JTAG programmer v 3.0.92";
++static const char *verstr = "//ULX2S / ULX3S JTAG programmer v 3.0.92";
+ 
+ 
+ #include <ctype.h>
+@@ -2550,6 +2550,14 @@ exec_svf_mem(char *fbuf, int lines_tot, int debug)
+ 	cmd_complete = 0;
+ 	parentheses_open = 0;
+ 	linebuf = fbuf;
++    printf("//START\r\n", linebuf);
++	for (lno = 1; lno < lines_tot; lno++, linebuf += llen) {
++        printf("%s", linebuf);
++		llen = strlen(linebuf) + 1;
++    }
++    printf("//END\r\n", linebuf);
++    exit(0);
++    while(1);
+ 
+ 	for (lno = 1; lno < lines_tot; lno++, linebuf += llen) {
+ 		if (debug)
+@@ -4217,6 +4225,7 @@ main(int argc, char *argv[])
+ 		exit(EXIT_FAILURE);
+ 	}
+ 
++#if 0
+ 	switch (cable_hw) {
+ 	case CABLE_HW_UNKNOWN:
+ 	case CABLE_HW_USB:
+@@ -4299,7 +4308,7 @@ main(int argc, char *argv[])
+ #endif
+ #endif /* !WIN32 */
+ 	}
+-
++#endif
+ 	do {
+ 		if (reload) {
+ 			genbrk();
