@@ -148,7 +148,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 | Pin | Function |
 |-----|----------|
 | CLK | B9       |
-| CKE | A4       |
+| CKE | VCC      |
 | CS  | GND      |
 | RAS | B10      |
 | CAS | A9       |
@@ -192,7 +192,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 | DQ19| D11      |
 | DQ20| C11      |
 | DQ21| D12      |
-| DQ22| F9       |
+| DQ22| E9       |
 | DQ23| C12      |
 | DQ24| E14      |
 | DQ25| C15      |
