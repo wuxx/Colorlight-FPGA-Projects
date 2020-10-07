@@ -1,8 +1,16 @@
 # Colorlight-FPGA-Projects
+current focus on colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can long-term supply, and the pinout of i5-v7.0 is same as i5-v6.0.
 
 ## Colorlight i5-v6.0
 ![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-v6.0-top.jpg)
 ![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-v6.0-bottom.jpg)
+## Colorlight i5-v7.0
+![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-v7.0-top.jpg)
+![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-v7.0-bottom.jpg)
+## Ext-Board
+![ext-board-1](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-1.png)
+![ext-board-2](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-2.jpg)
+
 ### Component
 - FPGA  
 LFE5U-25F-6BG381C
