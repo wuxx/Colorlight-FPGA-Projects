@@ -1,5 +1,19 @@
 # Colorlight-FPGA-Projects
-current focus on colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can long-term supply, and the pinout of i5-v7.0 is same as i5-v6.0.
+* [Colorlight i5-v6.0](#colorlight-i5-v60)
+* [Colorlight i5-v7.0](#colorlight-i5-v70)
+* [Ext Board](#ext-board)
+* [Component](#component)
+    * [Jtag](#jtag)
+    * [Clock](#clock)
+    * [LED](#led)
+    * [SPI-Flash](#spi-flash-u31)
+    * [DDR2 SODIMM 200P](#ddr2-sodimm-200p)
+    * [SDRAM](#sdram-u18)
+    * [ETH-PHY0](#eth-phy0-u28)
+    * [ETH-PHY1](#eth-phy1-u29)
+* [Reference](#reference)
+    
+current focus on colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can long-term supply, and the pinout of i5-v7.0 is same as i5-v6.0. check [get-start](./get-start.md) to see how to setup the env and program the bitstream.
 
 ## Colorlight i5-v6.0
 ![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-v6.0-top.jpg)
@@ -15,9 +29,9 @@ current focus on colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can lo
 - FPGA  
 LFE5U-25F-6BG381C
 - SDRAM  
-EM638325BK-6H
+EM638325BK-6H 8MB
 - SPI Flash  
-GD25Q16CSIG
+GD25Q16CSIG 2MB
 - Ethernet PHY  
 1Gb Ethernet PHY Broadcom B50612D x 2
 
