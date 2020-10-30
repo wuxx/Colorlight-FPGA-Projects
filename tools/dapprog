@@ -5,40 +5,50 @@ if [ ${#1} -eq 0 ]; then
     exit 0
 fi
 
-
 CURRENT_DIR=$(cd $(dirname $0); pwd)
-
-IMAGE_FILE=$1
-
-EXT="${IMAGE_FILE##*.}"
-echo EXT: $EXT
-
-#flash write_image erase xxx.hex;
-#flash write_image erase xxx.bin 0x08000000;
-
-if [ "${EXT}" == "svf" ]; then
-    TARGET="$IMAGE_FILE"
-elif [ "${EXT}" == "bit" ]; then
-    NAME="${IMAGE_FILE%%.bit}"
-    #/home/pi/oss/ulx3s/tools/ujprog/ujprog -j SRAM  ${IMAGE_FILE} > ${NAME}_sram.svf
-    /home/pi/oss/ulx3s/tools/ujprog/ujprog -j FLASH ${IMAGE_FILE} > ${NAME}_flash.svf
-    TARGET="${NAME}_flash.svf"
-else
-    echo "illegal suffix [$EXT]"
-    exit 1
-fi
-
-echo "TARGET: ${TARGET}"
-
 CONFIG=${CURRENT_DIR}/cmsisdap.cfg
 
-sudo openocd -f ${CONFIG} -c \
-"   init;
-    scan_chain;
-    svf -tap ecp5.tap -quiet -progress ${TARGET};
-    exit;
-"
+if [ "$1" == "--probe" ] || [ "$1" == "-p" ]; then
+    #probe
+    sudo openocd -f ${CONFIG} -c \
+    "   init;
+        scan_chain;
+        exit;
+    "
+    exit $?
 
-exit $?
+else
+    # program 
+    IMAGE_FILE=$1
+    
+    EXT="${IMAGE_FILE##*.}"
+    echo EXT: $EXT
+    
+    #flash write_image erase xxx.hex;
+    #flash write_image erase xxx.bin 0x08000000;
+    
+    if [ "${EXT}" == "svf" ]; then
+        TARGET="$IMAGE_FILE"
+    elif [ "${EXT}" == "bit" ]; then
+        NAME="${IMAGE_FILE%%.bit}"
+        #/home/pi/oss/ulx3s/tools/ujprog/ujprog -j SRAM  ${IMAGE_FILE} > ${NAME}_sram.svf
+        ${CURRENT_DIR}/ujprog.bit2svf -j FLASH ${IMAGE_FILE} > ${NAME}_flash.svf
+        TARGET="${NAME}_flash.svf"
+    else
+        echo "illegal suffix [$EXT]"
+        exit 1
+    fi
+    
+    echo "TARGET: ${TARGET}"
+    
+    sudo openocd -f ${CONFIG} -c \
+    "   init;
+        scan_chain;
+        svf -tap ecp5.tap -quiet -progress ${TARGET};
+        exit;
+    "
+    
+    exit $?
 
+fi
 

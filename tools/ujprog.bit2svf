@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CURRENT_DIR=$(cd $(dirname $0); pwd)
+
+PLATFORM=$(uname -m)
+
+if [ "${PLATFORM}" == "x86_64" ]; then
+    ${CURRENT_DIR}/ujprog.bit2svf.x64 $@
+else
+    ${CURRENT_DIR}/ujprog.bit2svf.arm $@
+fi
+
