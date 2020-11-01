@@ -273,3 +273,5 @@ A 25Mhz clock is connected to FPGA with pin P3
 [https://github.com/lawrie/ulx3s_examples](https://github.com/lawrie/ulx3s_examples)
 - ULX3S-Blinky by DoctorWkt  
 [https://github.com/DoctorWkt/ULX3S-Blinky](https://github.com/DoctorWkt/ULX3S-Blinky.git)
+- litex with dram
+[https://github.com/ghent360/riscvOnColorlight-5A-75B](https://github.com/ghent360/riscvOnColorlight-5A-75B)
