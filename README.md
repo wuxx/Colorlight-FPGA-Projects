@@ -1,5 +1,4 @@
 # Colorlight-FPGA-Projects
-* [Colorlight i5-v6.0](#colorlight-i5-v60)
 * [Colorlight i5-v7.0](#colorlight-i5-v70)
 * [Ext Board](#ext-board)
 * [Component](#component)
@@ -14,14 +13,12 @@
 * [How to Buy](#how-to-buy)
 * [Reference](#reference)
     
-current focus on colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can long-term supply, and the pinout of i5-v7.0 is same as i5-v6.0. check [get-start](./get-start.md) to see how to setup the env and program the bitstream.
+some board & modules made by Colorlight are based on Lattice ECP5 series, which are supported by open source toolchain (yosys & prjtrellis & nextpnr), can be used to make very interesting project.
+current focus on Colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can long-term supply, and the pinout of i5-v7.0 is same as i5-v6.0. check [get-start](./get-start.md) to see how to setup the env and program the bitstream.
 
-## Colorlight i5-v6.0
-![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-v6.0-top.jpg)
-![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-v6.0-bottom.jpg)
 ## Colorlight i5-v7.0
-![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-v7.0-top.jpg)
-![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-v7.0-bottom.jpg)
+![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-top.jpg)
+![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-bottom.jpg)
 ## Ext-Board
 ![ext-board-1](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-1.jpg)
 ![ext-board-2](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-2.jpg)
@@ -267,8 +264,8 @@ A 25Mhz clock is connected to FPGA with pin P3
 
 ## How to Buy
 you can buy Colorlight i5 and 5A-75B on our aliexpress store
-[Colorlight i5](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)
-[Colorlight 5A-75B](https://www.aliexpress.com/item/1005001686175194.html?spm=2114.12010615.8148356.3.3e035362B6o2DO)
+[Colorlight i5](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)  
+[Colorlight 5A-75B](https://www.aliexpress.com/item/1005001686175194.html?spm=2114.12010615.8148356.3.3e035362B6o2DO)  
 ## reference
 
 - chubby75  
