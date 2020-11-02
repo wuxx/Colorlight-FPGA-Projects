@@ -11,6 +11,7 @@
     * [SDRAM](#sdram-u18)
     * [ETH-PHY0](#eth-phy0-u28)
     * [ETH-PHY1](#eth-phy1-u29)
+* [How to Buy](#how-to-buy)
 * [Reference](#reference)
     
 current focus on colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can long-term supply, and the pinout of i5-v7.0 is same as i5-v6.0. check [get-start](./get-start.md) to see how to setup the env and program the bitstream.
@@ -24,6 +25,7 @@ current focus on colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can lo
 ## Ext-Board
 ![ext-board-1](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-1.jpg)
 ![ext-board-2](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-2.jpg)
+![ext-board-pinout](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5_extboard_v1.2_pinout.png)
 
 ### Component
 - FPGA  
@@ -263,6 +265,10 @@ A 25Mhz clock is connected to FPGA with pin P3
 | RXD[3]|    P1    |
 | RX_DV |    P2    |
 
+## How to Buy
+you can buy Colorlight i5 and 5A-75B on our aliexpress store
+[Colorlight i5](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)
+[Colorlight 5A-75B](https://www.aliexpress.com/item/1005001686175194.html?spm=2114.12010615.8148356.3.3e035362B6o2DO)
 ## reference
 
 - chubby75  
