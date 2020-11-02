@@ -263,7 +263,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 | RX_DV |    P2    |
 
 ## How to Buy
-you can buy Colorlight i5 and 5A-75B on our aliexpress store
+you can buy Colorlight i5 and 5A-75B on our aliexpress store  
 [Colorlight i5](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)  
 [Colorlight 5A-75B](https://www.aliexpress.com/item/1005001686175194.html?spm=2114.12010615.8148356.3.3e035362B6o2DO)  
 ## reference
@@ -278,3 +278,5 @@ you can buy Colorlight i5 and 5A-75B on our aliexpress store
 [https://github.com/DoctorWkt/ULX3S-Blinky](https://github.com/DoctorWkt/ULX3S-Blinky.git)
 - litex with dram
 [https://github.com/ghent360/riscvOnColorlight-5A-75B](https://github.com/ghent360/riscvOnColorlight-5A-75B)
+- litex with ethernet
+[https://github.com/enjoy-digital/colorlite](https://github.com/enjoy-digital/colorlite)
