@@ -9,6 +9,8 @@ assume that you have install the yosys & prjtrellis & nextpnr, if no, please che
 ## openocd
 `$git clone https://github.com/ntfreak/openocd.git`  
 `$cd openocd`  
+`$git submodule init`  
+`$git submodule update`  
 `$./bootstrap`  
 `$./configure --enable-cmsis-dap`  
 `$make -j`  

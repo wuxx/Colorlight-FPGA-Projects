@@ -9,7 +9,7 @@ CURRENT_DIR=$(cd $(dirname $0); pwd)
 CONFIG=${CURRENT_DIR}/cmsisdap.cfg
 
 if [ "$1" == "--probe" ] || [ "$1" == "-p" ]; then
-    #probe
+    #probe add -d4 for detail log
     sudo openocd -f ${CONFIG} -c \
     "   init;
         scan_chain;
