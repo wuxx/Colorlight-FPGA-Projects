@@ -18,7 +18,7 @@ assume that you have install the yosys & prjtrellis & nextpnr, if no, please che
 
 ## setup
 after openocd installed, a shell script `dapprog` is written for convenient, export the path of dapprog, then we can use it everywhere, because the openocd can only support svf file, so the bit file is first convert to svf file with a little modified urjtag, then use openocd command svf to process it. in addition, the svf file is program to sram and the bit file is program to the flash.  
-`$cd tools`  
+`$cd Colorlight-FPGA-Projects/tools`  
 `$source env.sh`  
 `$dapprog xxx.svf or xxx.bit`  
 the SPI-Flash on i5 modules is GD25Q16, program bitstream to the SPI-Flash is failed in current, it seems the Flash is locked, the simpest way to solve this may be replace the chip with a Winbond w25Qxx like W25Q128.
