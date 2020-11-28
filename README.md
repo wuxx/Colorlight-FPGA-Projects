@@ -276,7 +276,9 @@ you can buy Colorlight i5 and 5A-75B on our aliexpress store
 [https://github.com/lawrie/ulx3s_examples](https://github.com/lawrie/ulx3s_examples)
 - ULX3S-Blinky by DoctorWkt  
 [https://github.com/DoctorWkt/ULX3S-Blinky](https://github.com/DoctorWkt/ULX3S-Blinky.git)
-- litex with dram
+- litex without dram  
+[https://github.com/wuxx/litexOnColorlightLab004](https://github.com/wuxx/litexOnColorlightLab004)
+- litex with dram  
 [https://github.com/ghent360/riscvOnColorlight-5A-75B](https://github.com/ghent360/riscvOnColorlight-5A-75B)
-- litex with ethernet
+- litex with ethernet  
 [https://github.com/enjoy-digital/colorlite](https://github.com/enjoy-digital/colorlite)
