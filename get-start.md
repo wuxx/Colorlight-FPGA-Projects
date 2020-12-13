@@ -21,4 +21,4 @@ after openocd installed, a shell script `dapprog` is written for convenient, exp
 `$cd Colorlight-FPGA-Projects/tools`  
 `$source env.sh`  
 `$dapprog xxx.svf or xxx.bit`  
-the SPI-Flash on i5 modules is GD25Q16, program bitstream to the SPI-Flash is failed in current, it seems the Flash is locked, the simpest way to solve this may be replace the chip with a Winbond w25Qxx like W25Q128.
+the SPI-Flash on i5 modules is GD25Q16, program bitstream to the SPI-Flash is failed in current, it seems the Flash is locked, the simpest way to solve this ~~may be replace the chip with a Winbond w25Qxx like W25Q128~~ is follow [this instruction](https://github.com/kazkojima/colorlight-i5-tips#spiflash)

@@ -179,7 +179,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 | DQM2| GND      |
 | DQM3| GND      |
 | BA0 | B11      |
-| BA1 | GND      |
+| BA1 | (GND on v6.0;C8 on v7.0)     |
 | A0  | B13      |
 | A1  | C14      |
 | A2  | A16      |
@@ -272,6 +272,8 @@ you can buy Colorlight i5 and 5A-75B on our aliexpress store
 [https://github.com/q3k/chubby75](https://github.com/q3k/chubby75)
 - Colorlight-5A-75B  
 [https://github.com/kholia/Colorlight-5A-75B](https://github.com/kholia/Colorlight-5A-75B)
+- colorlight-i5-tips by kazkojima  
+[https://github.com/kazkojima/colorlight-i5-tips](https://github.com/kazkojima/colorlight-i5-tips)
 - ulx3s_examples by lawrie  
 [https://github.com/lawrie/ulx3s_examples](https://github.com/lawrie/ulx3s_examples)
 - ULX3S-Blinky by DoctorWkt  
