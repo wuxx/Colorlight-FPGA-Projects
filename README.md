@@ -284,3 +284,5 @@ you can buy Colorlight i5 and 5A-75B on our aliexpress store
 [https://github.com/ghent360/riscvOnColorlight-5A-75B](https://github.com/ghent360/riscvOnColorlight-5A-75B)
 - litex with ethernet  
 [https://github.com/enjoy-digital/colorlite](https://github.com/enjoy-digital/colorlite)
+- supported in IceStudio and Apio
+[https://github.com/benitoss/ColorLight_FPGA_boards](https://github.com/benitoss/ColorLight_FPGA_boards)
