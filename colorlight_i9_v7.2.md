@@ -1,5 +1,5 @@
 # Colorlight-FPGA-Projects
-* [Colorlight i5-v7.0](#colorlight-i5-v70)
+* [Colorlight i9-v7.2](#colorlight-i9-v72)
 * [Ext Board](#ext-board)
 * [Component](#component)
     * [Jtag](#jtag)
@@ -12,12 +12,11 @@
     * [ETH-PHY1](#eth-phy1-u29)
 * [How to Buy](#how-to-buy)
 * [Reference](#reference)
-    
-some board & modules made by Colorlight are based on Lattice ECP5 series, which are supported by open source toolchain (yosys & prjtrellis & nextpnr), can be used to make very interesting project.
-current focus on Colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can long-term supply, and the pinout of i5-v7.0 is same as i5-v6.0. check [get-start](./get-start.md) to see how to setup the env and program the bitstream.
-the Colorlight i9 contain a LFE5U-45F-6BG381, all GPIO already reversed, check [Colorlight i9](colorlight_i9_v7.2.md) to see the detail.
 
-## Colorlight i5-v7.0
+i9-v7.2 io layout is almost the same as i5, except for one difference:
+- SODIMM-Pin-41 change from U16 to L20
+
+## Colorlight i9-v7.2
 ![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-top.jpg)
 ![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-bottom.jpg)
 ## Ext-Board
@@ -27,11 +26,11 @@ the Colorlight i9 contain a LFE5U-45F-6BG381, all GPIO already reversed, check [
 
 ### Component
 - FPGA  
-LFE5U-25F-6BG381C
+LFE5U-45F-6BG381C
 - SDRAM  
-EM638325BK-6H 8MB
+M12L64322A 8MB SDRAM (512K x 32 Bit x 4 Banks)
 - SPI Flash  
-GD25Q16CSIG 2MB
+W25Q64JVSIQ 8MB
 - Ethernet PHY  
 1Gb Ethernet PHY Broadcom B50612D x 2
 
@@ -49,7 +48,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 ### LED
 | Pin | Function |
 |-----|----------|
-| D2  | U16      |
+| D2  | L2       |
 
 ### SPI-FLASH (U31)
 | Pin | Function |
@@ -85,7 +84,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 |   GND    |    39   |    40   |   GND    |
 |          |         |         |          |
 |          |         |         |          |
-|   U16    |    41   |    42   |   R1     |
+|   L20    |    41   |    42   |   R1     |
 |   NC     |    43   |    44   |   T1     |
 |   NC     |    45   |    46   |   U1     |
 |   NC     |    47   |    48   |   Y2     |
@@ -180,7 +179,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 | DQM2| GND      |
 | DQM3| GND      |
 | BA0 | B11      |
-| BA1 | (GND on v6.0;C8 on v7.0)     |
+| BA1 | C8       |
 | A0  | B13      |
 | A1  | C14      |
 | A2  | A16      |
@@ -225,7 +224,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 | DQ30| D14      |
 | DQ31| D13      |
 
-### ETH-PHY0 (U28)
+### ETH-PHY0 (U29)
 | Pin   | Function |
 |-------|----------|
 | MDC   |    N5    |
@@ -244,7 +243,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 | RXD[3]|    M19   |
 | RX_DV |    M20   |
 
-### ETH-PHY1 (U29)
+### ETH-PHY1 (U30)
 | Pin   | Function |
 |-------|----------|
 | MDC   |    N5    |
@@ -264,7 +263,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 | RX_DV |    P2    |
 
 ## How to Buy
-you can buy Colorlight i5 and 5A-75B on our aliexpress store  
+you can buy Colorlight i5, i9 and 5A-75B on our aliexpress store  
 [Colorlight i5](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)  
 [Colorlight 5A-75B](https://www.aliexpress.com/item/1005001686175194.html?spm=2114.12010615.8148356.3.3e035362B6o2DO)  
 ## reference
