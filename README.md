@@ -13,9 +13,9 @@
 * [How to Buy](#how-to-buy)
 * [Reference](#reference)
     
-some board & modules made by Colorlight are based on Lattice ECP5 series, which are supported by open source toolchain (yosys & prjtrellis & nextpnr), can be used to make very interesting project.
-current focus on Colorlight i5-v6.0 & i5-v7.0, i5-v7.0 is the latest, and can long-term supply, and the pinout of i5-v7.0 is same as i5-v6.0. check [get-start](./get-start.md) to see how to setup the env and program the bitstream.
-the Colorlight i9 contain a LFE5U-45F-6BG381, all GPIO already reversed, check [Colorlight i9](colorlight_i9_v7.2.md) to see the detail.
+some board & modules made by Colorlight are based on Lattice ECP5 series, which are supported by open source toolchain (yosys & prjtrellis & nextpnr), can be used to make very interesting project.  
+current focus on Colorlight i5-v6.0 & i5-v7.0 and i9-v7.2, i5-v7.0 is the latest, and can long-term supply, and the pinout of i5-v7.0 is same as i5-v6.0. check [get-start](./get-start.md) to see how to setup the env and program the bitstream.  
+the Colorlight i9-v7.2 contain a LFE5U-45F-6BG381, all GPIO already reversed, check [Colorlight i9-v7.2](colorlight_i9_v7.2.md) to see the detail.
 
 ## Colorlight i5-v7.0
 ![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-top.jpg)

@@ -13,16 +13,15 @@
 * [How to Buy](#how-to-buy)
 * [Reference](#reference)
 
-i9-v7.2 io layout is almost the same as i5, except for one difference:
+i9-v7.2 GPIO layout is almost the same as i5, except for differences below:
 - SODIMM-Pin-41 change from U16 to L20
+- LED D2 change from U16 to L20
 
 ## Colorlight i9-v7.2
-![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-top.jpg)
-![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-bottom.jpg)
+![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9-v7.2-top.jpg)
+![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9-v7.2-bottom.jpg)
 ## Ext-Board
-![ext-board-1](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-1.jpg)
-![ext-board-2](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-2.jpg)
-![ext-board-pinout](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9_v7.2_pinout.png)
+![ext-board-pinout](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9-v7.2-2.jpg)
 
 ### Component
 - FPGA  
@@ -264,7 +263,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 
 ## How to Buy
 you can buy Colorlight i5, i9 and 5A-75B on our aliexpress store  
-[Colorlight i5](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)  
+[Colorlight i5 & i9](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)  
 [Colorlight 5A-75B](https://www.aliexpress.com/item/1005001686175194.html?spm=2114.12010615.8148356.3.3e035362B6o2DO)  
 ## reference
 
