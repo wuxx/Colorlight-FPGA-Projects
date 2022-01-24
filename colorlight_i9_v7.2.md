@@ -14,8 +14,8 @@
 * [Reference](#reference)
 
 i9-v7.2 GPIO layout is almost the same as i5, except for differences below:
-- SODIMM-Pin-41 change from U16 to L20
-- LED D2 change from U16 to L20 (shared with SODIMM-Pin-41)
+- SODIMM-Pin-41 change from U16 to L2
+- LED D2 change from U16 to L2 (shared with SODIMM-Pin-41)
 
 ## Colorlight i9-v7.2
 ![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9-v7.2-top.jpg)
