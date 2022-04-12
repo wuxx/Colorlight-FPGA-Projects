@@ -1,15 +1,26 @@
 #!/bin/bash
 
+
+trap 'onCtrlC' INT
+function onCtrlC () {
+    echo 'exit'
+    exit 0
+}
+
+
 succ_count=0
 fail_count=0
 
-target_image=/home/pi/oss/colorlight/colorlight-i5-tips/streams/colorlight_i5.svf
+#target_image=/home/pi/oss/colorlight/Colorlight-FPGA-Projects/demo/i9/blink.svf
+target_image=/home/pi/oss/colorlight/Colorlight-FPGA-Projects/demo/i5/blink.bit
 
 while [ 1 ]; do
     ./probe.sh
     if [ $? -eq 0 ]; then
 
-        dapprog ${target_image}
+        ./unlock.sh
+        #dapprog ${target_image}
+        #ecpdap flash write --freq 5000 ${target_image}
             
         if [ $? -eq 0 ]; then
             succ_count=$(($succ_count+1))  
@@ -26,13 +37,14 @@ while [ 1 ]; do
             if [ $? -eq 1 ]; then
                 break;
             else
-                echo "wait detach..."
+                echo "wait detach >>> [$(lsusb | grep "0d28:0204")]"
                 sleep 0.1
             fi
         done
 
     else
-        echo "wait attach..."
+        echo "wait attach <<< [$(lsusb | grep "0d28:0204")]"
+
         sleep 0.1
 
     fi

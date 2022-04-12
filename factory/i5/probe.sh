@@ -1,3 +1,3 @@
 #!/bin/bash
 
-dapprog -p
+dapprog -p >/dev/null 2>&1
