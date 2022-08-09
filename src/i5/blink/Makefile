@@ -3,12 +3,10 @@ TOP=blink
 
 OBJS+=blink.v rst_gen.v
 
-TRELLIS=/usr/local/share/trellis
-
 all: ${TARGET}.bit
 
 $(TARGET).json: $(OBJS)
-	yosys -p "synth_ecp5 -json $@" $(OBJS)
+	yosys -p "synth_ecp5 -top ${TOP} -json $@" $(OBJS)
 
 $(TARGET)_out.config: $(TARGET).json
 	nextpnr-ecp5 --25k --package CABGA381 --speed 6 --json $< --textcfg $@ --lpf $(TARGET).lpf --freq 65
@@ -16,12 +14,12 @@ $(TARGET)_out.config: $(TARGET).json
 $(TARGET).bit: $(TARGET)_out.config
 	ecppack --svf ${TARGET}.svf $< $@
 
-${TARGET}.svf : ${TARGET}.bit
+${TARGET}.svf: ${TARGET}.bit
 
-prog: ${TARGET}.svf
+prog: ${TARGET}.bit
 	openFPGALoader -c digilent_hs2 $(TARGET).bit
 
 clean:
-	rm -f *.svf *.bit *.config *.ys
+	rm -f *.svf *.bit *.config *.json *.ys
 
-.PHONY: prog clean
+.PHONY: all prog clean
