@@ -84,7 +84,7 @@ A 25Mhz clock is connected to FPGA with pin P3
 |   GND    |    39   |    40   |   GND    |
 |          |         |         |          |
 |          |         |         |          |
-|   L20    |    41   |    42   |   R1     |
+|   L2     |    41   |    42   |   R1     |
 |   NC     |    43   |    44   |   T1     |
 |   NC     |    45   |    46   |   U1     |
 |   NC     |    47   |    48   |   Y2     |
