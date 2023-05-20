@@ -49,15 +49,15 @@ A 25Mhz clock is connected to FPGA with pin P3
 ### LED
 | Pin | Function |
 |-----|----------|
-| D2  | U16      |
+| U16 | D2       |
 
 ### SPI-FLASH (U31)
 | Pin | Function |
 |-----|----------|
-| CS  | R2       |
-| MISO| V2       |
-| MOSI| W2       |
-| SCK | U3       |
+| R2  | CS       |
+| V2  | MISO     |
+| W2  | MOSI     |
+| U3  | SCK      |
 
 
 ### DDR2-SODIMM-200P
@@ -169,99 +169,99 @@ A 25Mhz clock is connected to FPGA with pin P3
 ### SDRAM (U18)
 | Pin | Function |
 |-----|----------|
-| CLK | B9       |
-| CKE | VCC      |
-| CS  | GND      |
-| RAS | B10      |
-| CAS | A9       |
-| WE  | A10      |
-| DQM0| GND      |
-| DQM1| GND      |
-| DQM2| GND      |
-| DQM3| GND      |
-| BA0 | B11      |
-| BA1 | (GND on v6.0;C8 on v7.0)     |
-| A0  | B13      |
-| A1  | C14      |
-| A2  | A16      |
-| A3  | A17      |
-| A4  | B16      |
-| A5  | B15      |
-| A6  | A14      |
-| A7  | A13      |
-| A8  | A12      |
-| A9  | A11      |
-| A10 | B12      |
-| DQ0 | B6       |
-| DQ1 | A5       |
-| DQ2 | A6       |
-| DQ3 | A7       |
-| DQ4 | C7       |
-| DQ5 | B8       |
-| DQ6 | B5       |
-| DQ7 | A8       |
-| DQ8 | D8       |
-| DQ9 | D7       |
-| DQ10| E8       |
-| DQ11| D6       |
-| DQ12| C6       |
-| DQ13| D5       |
-| DQ14| E7       |
-| DQ15| C5       |
-| DQ16| C10      |
-| DQ17| D9       |
-| DQ18| E11      |
-| DQ19| D11      |
-| DQ20| C11      |
-| DQ21| D12      |
-| DQ22| E9       |
-| DQ23| C12      |
-| DQ24| E14      |
-| DQ25| C15      |
-| DQ26| E13      |
-| DQ27| D15      |
-| DQ28| E12      |
-| DQ29| B17      |
-| DQ30| D14      |
-| DQ31| D13      |
+| B9  | CLK      |
+| VCC | CKE      |
+| GND | CS       |
+| B10 | RAS      |
+| A9  | CAS      |
+| A10 | WE       |
+| GND | DQM0     |
+| GND | DQM1     |
+| GND | DQM2     |
+| GND | DQM3     |
+| B11 | BA0      |
+|(GND on v6.0; C8 on v7.0) |  BA1    |
+| B13 | A0       |
+| C14 | A1       |
+| A16 | A2       |
+| A17 | A3       |
+| B16 | A4       |
+| B15 | A5       |
+| A14 | A6       |
+| A13 | A7       |
+| A12 | A8       |
+| A11 | A9       |
+| B12 | A10      |
+| B6  | DQ0      |
+| A5  | DQ1      |
+| A6  | DQ2      |
+| A7  | DQ3      |
+| C7  | DQ4      |
+| B8  | DQ5      |
+| B5  | DQ6      |
+| A8  | DQ7      |
+| D8  | DQ8      |
+| D7  | DQ9      |
+| E8  | DQ10     |
+| D6  | DQ11     |
+| C6  | DQ12     |
+| D5  | DQ13     |
+| E7  | DQ14     |
+| C5  | DQ15     |
+| C10 | DQ16     |
+| D9  | DQ17     |
+| E11 | DQ18     |
+| D11 | DQ19     |
+| C11 | DQ20     |
+| D12 | DQ21     |
+| E9  | DQ22     |
+| C12 | DQ23     |
+| E14 | DQ24     |
+| C15 | DQ25     |
+| E13 | DQ26     |
+| D15 | DQ27     |
+| E12 | DQ28     |
+| B17 | DQ29     |
+| D14 | DQ30     |
+| D13 | DQ31     |
 
 ### ETH-PHY0 (U28)
 | Pin   | Function |
 |-------|----------|
-| MDC   |    N5    |
-| MDIO  |    P5    |
-| RESET |    P4    |
-| GTXCLK|    U19   |
-| TXD[0]|    U20   |
-| TXD[1]|    T19   |
-| TXD[2]|    T20   |
-| TXD[3]|    R20   |
-| TX_EN |    P19   |
-| RXC   |    L19   |
-| RXD[0]|    P20   |
-| RXD[1]|    N19   |
-| RXD[2]|    N20   |
-| RXD[3]|    M19   |
-| RX_DV |    M20   |
+| N5    |   MDC    |
+| P5    |   MDIO   |
+| P4    |   RESET  |
+| U19   |   GTXCLK |
+| U20   |   TXD[0] |
+| T19   |   TXD[1] |
+| T20   |   TXD[2] |
+| R20   |   TXD[3] |
+| P19   |   TX_EN  |
+| L19   |   RXC    |
+| P20   |   RXD[0] |
+| N19   |   RXD[1] |
+| N20   |   RXD[2] |
+| M19   |   RXD[3] |
+| M20   |   RX_DV  |
 
 ### ETH-PHY1 (U29)
 | Pin   | Function |
 |-------|----------|
-| MDC   |    N5    |
-| MDIO  |    P5    |
-| RESET |    P4    |
-| GTXCLK|    G1    |
-| TXD[0]|    G2    |
-| TXD[1]|    H1    |
-| TXD[2]|    J1    |
-| TXD[3]|    J3    |
-| TX_EN |    K1    |
-| RXC   |    H2    |
-| RXD[0]|    K2    |
-| RXD[1]|    L1    |
-| RXD[2]|    N1    |
-| RXD[3]|    P1    |
-| RX_DV |    P2    |
+| N5    |   MDC    |
+| P5    |   MDIO   |
+| P4    |   RESET  |
+| G1    |   GTXCLK |
+| G2    |   TXD[0] |
+| H1    |   TXD[1] |
+| J1    |   TXD[2] |
+| J3    |   TXD[3] |
+| K1    |   TX_EN  |
+| H2    |   RXC    |
+| K2    |   RXD[0] |
+| L1    |   RXD[1] |
+| N1    |   RXD[2] |
+| P1    |   RXD[3] |
+| P2    |   RX_DV  |
 
 ## How to Buy
 you can buy Colorlight i5 and 5A-75B on our aliexpress store  
