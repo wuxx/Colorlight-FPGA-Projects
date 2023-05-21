@@ -1,4 +1,4 @@
-# Get Start
+# Colorlight i5 & i9 Get Start
 
 The breakout board has a ARMMbed DAPLink debugger which support JTAG and a CDC serial port, we need to use openocd to program the bitstream.
 assume that you have install the yosys & prjtrellis & nextpnr, if no, please check these links.

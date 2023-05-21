@@ -1,0 +1,57 @@
+#!/bin/bash
+
+
+OPENOCD_ROOT=/home/pi/oss/openocd-latest/mainline/openocd
+OPENOCD_BIN=${OPENOCD_ROOT}/src/openocd
+
+
+CURRENT_DIR=$(cd $(dirname $0); pwd)
+
+CMD=$0
+TARGET=$1
+
+OP=${CMD##*-}
+echo $OP
+
+if [ ${OP} != "probe" ] && [ ${#1} -eq 0 ]; then
+    echo "usage: $0 xxx.bit"
+    exit 0
+fi
+
+if [ "$OP" == "probe" ]; then
+
+    sudo ${OPENOCD_BIN} -s ${OPENOCD_ROOT}/tcl -f ${CURRENT_DIR}/ch347.cfg -c \
+    "\
+        init;
+        pld load 0 ${CURRENT_DIR}/bscan_spi_xc7a50t.bit;
+        reset halt;
+        flash probe 0;
+    " -c exit
+
+elif [ "$OP" == "sram" ]; then
+
+    sudo ${OPENOCD_BIN} -s ${OPENOCD_ROOT}/tcl -f ${CURRENT_DIR}/ch347.cfg -c "init; pld load 0 ${TARGET};" -c exit
+
+elif [ "$OP" == "flash" ]; then
+
+    sudo ${OPENOCD_BIN} -s ${OPENOCD_ROOT}/tcl -f ${CURRENT_DIR}/ch347.cfg -c \
+    "\
+        set XC7_JSHUTDOWN 0x0d;
+        set XC7_JPROGRAM 0x0b;
+        set XC7_JSTART 0x0c;
+        set XC7_BYPASS 0x3f;
+        init;
+        pld load 0 ${CURRENT_DIR}/bscan_spi_xc7a50t.bit;
+        reset halt;
+        flash probe 0;
+        flash write_image erase ${TARGET} 0x0 bin;
+        irscan xc7.tap $XC7_JSHUTDOWN;
+        irscan xc7.tap $XC7_JPROGRAM;
+        runtest 60000;
+        runtest 2000;
+        irscan xc7.tap $XC7_BYPASS;
+        runtest 2000;
+        reset;
+    " -c exit
+
+fi
