@@ -291,7 +291,7 @@ $make -j
 ```
 
 ### Program
-use the openocd to program the bitstream, there are two wrapped script commands `ch347prog-sram` and `ch347prog-flash` in the tools directory, you can import scripts into the environment for use under any path.
+use the openocd to program the bitstream, there are two wrapped script commands `ch347prog-sram` and `ch347prog-flash` in the tools directory, you can import scripts into the environment for use under any path.  
 NOTE-1: you may need to edit the openocd path(OPENOCD_ROOT) in script.  
 NOTE-2: Since the flash chip on the module is protected by default, you need to perform the unlock operation when using the module for the first time.  
 
