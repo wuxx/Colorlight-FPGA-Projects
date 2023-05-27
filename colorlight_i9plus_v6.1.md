@@ -45,12 +45,12 @@ MX25L128 16MB
 A 25Mhz clock is connected to FPGA with pin K4
 
 ### LED
-| Pin | Function |
+| LED | FPGA Pin |
 |-----|----------|
 | D2  | A18      |
 
 ### SPI-FLASH (U12)
-| Pin | Function |
+| U12 Pin | FPGA Pin |
 |-----|----------|
 | CS  | T19      |
 | MISO| R22      |
@@ -165,7 +165,7 @@ A 25Mhz clock is connected to FPGA with pin K4
 |   GND    |    199  |    200  |   GND    |
 
 ### SDRAM (U6)
-| Pin | Function |
+| U6 Pin | FPGA Pin |
 |-----|----------|
 | CLK | E14      |
 | CKE | VCC      |
@@ -224,7 +224,7 @@ A 25Mhz clock is connected to FPGA with pin K4
 | DQ31| J21      |
 
 ### ETH-PHY0 (U5)
-| Pin   | Function |
+| U5 Pin   | FPGA Pin |
 |-------|----------|
 | MDC   |    G1    |
 | MDIO  |    G2    |
@@ -243,7 +243,7 @@ A 25Mhz clock is connected to FPGA with pin K4
 | RX_DV |    F1    |
 
 ### ETH-PHY1 (U9)
-| Pin   | Function |
+| U9 Pin   | FPGA Pin |
 |-------|----------|
 | MDC   |    G1    |
 | MDIO  |    G2    |
@@ -292,8 +292,8 @@ $make -j
 
 ### Program
 use the openocd to program the bitstream, there are two wrapped script commands `ch347prog-sram` and `ch347prog-flash` in the tools directory, you can import scripts into the environment for use under any path.
-NOTE-1: you may need to edit the openocd path(OPENOCD_ROOT) in script.
-NOTE-2: Since the flash chip on the module is protected by default, you need to perform the unlock operation when using the module for the first time.
+NOTE-1: you may need to edit the openocd path(OPENOCD_ROOT) in script.  
+NOTE-2: Since the flash chip on the module is protected by default, you need to perform the unlock operation when using the module for the first time.  
 
 ```
 $cd ~/Colorlight-FPGA-Projects/tools
@@ -307,7 +307,8 @@ $ch347prog-flash blinky.bit (program to SPI-Flash)
 
 ## How to Buy
 you can buy Colorlight i5, i9, i9plus and 5A-75B on our aliexpress store  
-[Colorlight i5 & i9 & i9 plus](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)  
+[Colorlight i9plus ](https://www.aliexpress.us/item/3256805434471000.html?spm=5261.ProductManageOnline.0.0.189c2ddbB6XS5T&gatewayAdapt=glo2usa4itemAdapt)  
+[Colorlight i5 & i9](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)  
 [Colorlight 5A-75B](https://www.aliexpress.com/item/1005001686175194.html?spm=2114.12010615.8148356.3.3e035362B6o2DO)  
 
 ## reference 

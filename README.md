@@ -266,7 +266,8 @@ A 25Mhz clock is connected to FPGA with pin P3
 
 ## How to Buy
 you can buy Colorlight i5 and 5A-75B on our aliexpress store  
-[Colorlight i5](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)  
+[Colorlight i5 & i9](https://www.aliexpress.com/item/1005001686186007.html?spm=2114.12010615.8148356.1.3e035362vDqWtV)  
+[Colorlight i9plus](https://www.aliexpress.us/item/3256805434471000.html?spm=5261.ProductManageOnline.0.0.189c2ddbB6XS5T&gatewayAdapt=glo2usa4itemAdapt)
 [Colorlight 5A-75B](https://www.aliexpress.com/item/1005001686175194.html?spm=2114.12010615.8148356.3.3e035362B6o2DO)  
 ## reference
 
