@@ -26,6 +26,7 @@ if [ "$OP" == "probe" ]; then
         pld load 0 ${CURRENT_DIR}/bscan_spi_xc7a50t.bit;
         reset halt;
         flash probe 0;
+        flash protect 0 0 50 off;
     " -c exit
 
 elif [ "$OP" == "sram" ]; then

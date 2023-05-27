@@ -1,5 +1,5 @@
 # Colorlight-FPGA-Projects
-* [Colorlight i9plus-v6.0](#colorlight-i9plus-v60)
+* [Colorlight i9plus-v6.1](#colorlight-i9plus-v61)
 * [Ext Board](#ext-board)
 * [Component](#component)
     * [Jtag](#jtag)
@@ -13,20 +13,21 @@
 * [How to Buy](#how-to-buy)
 * [Reference](#reference)
 
-colorlight i9plus-v6.0 
+colorlight i9plus-v6.1 
 
-## Colorlight i9plus-v6.0
-![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9plus-v6.0-top.jpg)
-![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9plus-v6.0-bottom.jpg)
+## Colorlight i9plus-v6.1
+![top](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9plus-v6.1-top.jpg)
+![bottom](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9plus-v6.1-bottom.jpg)
 ## Ext-Board
-![ext-board](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9-v6.0-2.jpg)
-![ext-board-pinout](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9_v6.0_pinout.png)
+![ext-board-1](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9plus-extboard-1.jpg)
+![ext-board-2](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9plus-extboard-2.jpg)
+![ext-board-pinout](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i9plus-v6.1-pinout.png)
 
 ### Component
 - FPGA  
 XC7A50T-FGG484
 - SDRAM  
-EM639325BK-5H 16MB SDRAM (1M x 32 Bit x 4 Banks)
+M12L64322A 8MB SDRAM (512K x 32 Bit x 4 Banks)
 - SPI Flash  
 MX25L128 16MB
 - Ethernet PHY  
@@ -291,12 +292,13 @@ $make -j
 
 ### Program
 use the openocd to program the bitstream, there are two wrapped script commands `ch347prog-sram` and `ch347prog-flash` in the tools directory, you can import scripts into the environment for use under any path.
-NOTE: you may need to edit the openocd path(OPENOCD_ROOT) in script.
-TODO: Since the flash chip on the module is protected, it can only be programmed into SRAM at present. a simple and crude solution is directly replace the flash chip.
+NOTE-1: you may need to edit the openocd path(OPENOCD_ROOT) in script.
+NOTE-2: Since the flash chip on the module is protected by default, you need to perform the unlock operation when using the module for the first time.
 
 ```
 $cd ~/Colorlight-FPGA-Projects/tools
 $source env.sh
+$ch347prog-sram unlock_flash_xc7a50t.bit #unlock the flash
 $cd ~/demo-projects/blinky-colorlight-i9plus
 $ch347prog-sram blinky.bit  (program to SRAM)
 or
