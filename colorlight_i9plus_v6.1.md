@@ -1,17 +1,23 @@
 # Colorlight-FPGA-Projects
-* [Colorlight i9plus-v6.1](#colorlight-i9plus-v61)
-* [Ext Board](#ext-board)
-* [Component](#component)
-    * [Jtag](#jtag)
-    * [Clock](#clock)
-    * [LED](#led)
-    * [SPI-Flash](#spi-flash-u12)
-    * [DDR2 SODIMM 200P](#ddr2-sodimm-200p)
-    * [SDRAM](#sdram-u6)
-    * [ETH-PHY0](#eth-phy0-u5)
-    * [ETH-PHY1](#eth-phy1-u9)
-* [How to Buy](#how-to-buy)
-* [Reference](#reference)
+- [Colorlight-FPGA-Projects](#colorlight-fpga-projects)
+  - [Colorlight i9plus-v6.1](#colorlight-i9plus-v61)
+  - [Ext-Board](#ext-board)
+    - [Component](#component)
+    - [JTAG](#jtag)
+    - [Clock](#clock)
+    - [LED](#led)
+    - [SPI-FLASH (U12)](#spi-flash-u12)
+    - [DDR2-SODIMM-200P](#ddr2-sodimm-200p)
+    - [SDRAM (U6)](#sdram-u6)
+    - [ETH-PHY0 (U5)](#eth-phy0-u5)
+    - [ETH-PHY1 (U9)](#eth-phy1-u9)
+  - [How to Build and Program](#how-to-build-and-program)
+    - [Install the Toolchain](#install-the-toolchain)
+    - [Compile the Bitstream](#compile-the-bitstream)
+    - [Build the Openocd](#build-the-openocd)
+    - [Program](#program)
+  - [How to Buy](#how-to-buy)
+  - [reference](#reference)
 
 colorlight i9plus-v6.1 
 
@@ -282,8 +288,9 @@ WCH release the openocd patch of the CH347, they also provide a GUI tool for pro
 ```
 $git clone https://github.com/openocd-org/openocd.git
 $cd openocd
+$git checkout 3a4f445bd92101d3daee3715178d3fbff3b7b029
 $cp ~/Colorlight-FPGA-Projects/tools/openocd-patch-for-ch347/ch347.patch .
-$git apply ch347.patch
+$git apply --reject --whitespace=fix ch347.patch
 $./bootstrap
 $./configure --enable-ch347 --disable-werror
 $make -j
