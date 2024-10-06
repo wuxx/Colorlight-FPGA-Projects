@@ -310,7 +310,7 @@ index 000000000..3c7ac2683
 +    char *str = calloc(size * 2 + 1, 1);
 +
 +    for (i = 0; i < size; i++)
-+        sprintf(str + 2 * i, "%02x ", buf[i]);
++        sprintf(str + 2 * i, "%02x", buf[i]);
 +    return str;
 +}
 +
