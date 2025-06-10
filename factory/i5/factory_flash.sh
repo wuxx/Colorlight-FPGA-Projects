@@ -13,7 +13,7 @@ fail_count=0
 
 #target_image=/home/pi/oss/colorlight/Colorlight-FPGA-Projects/demo/i9/blink.svf
 #target_image=/home/pi/oss/Colorlight-FPGA-Projects/demo/i5/blink.bit
-target_image=/home/pi/oss/Colorlight-FPGA-Projects/demo/i5/colorlight_i5.svf
+target_image=/home/pi/oss/colorlight/Colorlight-FPGA-Projects/demo/i5/colorlight_i5.svf
 
 while [ 1 ]; do
     ./probe.sh
