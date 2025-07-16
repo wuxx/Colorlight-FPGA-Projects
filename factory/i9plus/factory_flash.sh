@@ -42,7 +42,7 @@ while [ 1 ]; do
         done
 
     else
-        echo -e "\033[31m wait attach <<< \033[0m"
+        echo -e "\033[31m wait attach <<< [SUCC:$succ_count; FAIL:$fail_count] \033[0m"
 
         sleep 0.1
 
