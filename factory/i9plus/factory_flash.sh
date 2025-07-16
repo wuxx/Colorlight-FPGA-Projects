@@ -11,7 +11,7 @@ function onCtrlC () {
 succ_count=0
 fail_count=0
 
-target_image=/home/pi/oss/colorlight/Colorlight-FPGA-Projects/demo/i9plus/blinky_10.bit
+target_image=../../demo/i9plus/blinky_10.bit
 
 while [ 1 ]; do
     ./probe.sh
