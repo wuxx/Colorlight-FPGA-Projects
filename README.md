@@ -24,7 +24,7 @@ the Colorlight i9plus-v6.1 contain a XC7A50T-FGG484, all GPIO already reversed, 
 ## Ext-Board
 ![ext-board-1](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-1.jpg)
 ![ext-board-2](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/ext-board-2.jpg)
-![ext-board-pinout](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5_extboard_v1.2_pinout.png)
+![ext-board-pinout](https://github.com/wuxx/Colorlight-FPGA-Projects/blob/master/doc/i5-extboard-pinout.png)
 
 ### Component
 - FPGA  
